@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ifk-NR-N1h">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Deadman_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yLF-GO-Bht">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="yxP-u9-K4Z"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="4b0-Lv-Gd0"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yLF-GO-Bht" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="OYi-8d-XHc"/>
+                            <constraint firstItem="yLF-GO-Bht" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="c4b-Wx-ZGu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yLF-GO-Bht" secondAttribute="bottom" id="mOp-V0-jiv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yLF-GO-Bht" secondAttribute="trailing" id="nGc-az-TLj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="j0K-lL-3tB">
+                        <barButtonItem key="leftBarButtonItem" title="Run" id="na1-zT-9AR">
+                            <connections>
+                                <action selector="run:" destination="BYZ-38-t0r" id="kp0-Na-BWX"/>
+                            </connections>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Edit" id="oPc-YD-7LL">
+                                <connections>
+                                    <action selector="editPing:" destination="BYZ-38-t0r" id="U1K-U6-bNE"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="New" id="qPH-8u-OR1">
+                                <connections>
+                                    <action selector="newPing:" destination="BYZ-38-t0r" id="T93-06-yeC"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="edit" destination="oPc-YD-7LL" id="JZ2-ya-5D6"/>
+                        <outlet property="new" destination="qPH-8u-OR1" id="hQz-Mq-QPv"/>
+                        <outlet property="run" destination="na1-zT-9AR" id="Dbs-UG-3LB"/>
+                        <outlet property="tableView" destination="yLF-GO-Bht" id="mEg-PW-7QO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1089" y="791"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="r70-xW-Alc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ifk-NR-N1h" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kAX-Nw-shg">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="loY-3N-gax"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8cP-dj-XSl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="200.80000000000001" y="791.15442278860576"/>
+        </scene>
+    </scenes>
+</document>
